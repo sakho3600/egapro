@@ -9,14 +9,17 @@ metadata:
     namespace: ${STARTUP}-${NAMESPACE_ENVIRONMENT}
 spec:
   secretName: crt
+  commonName: ${ENVIRONMENT}.social.gouv.fr
   dnsNames:
     - ${APP_URL}
+    - "*.egapro.${ENVIRONMENT}.social.gouv.fr"
   acme:
     config:
-      - http01:
+      - dns01:
           ingressClass: azure/application-gateway
         domains:
           - ${APP_URL}
+          - "*.egapro.${ENVIRONMENT}.social.gouv.fr"
   issuerRef:
     name: ${LETS_ENCRYPT_ISSUER}
     kind: ClusterIssuer
