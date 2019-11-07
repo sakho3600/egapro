@@ -284,6 +284,8 @@ Register init kinto image tag:
     name: $CI_REGISTRY/socialgouv/docker/kubectl:${KUBECTL_VERSION}
   environment:
     name: ${DEV_ENVIRONMENT_NAME}
+  before_script:
+    - export NAMESPACE_ENVIRONMENT=${NAMESPACE_ENVIRONMENT:=$(printf "${CI_COMMIT_REF_NAME}" | sha1sum | cut -c1-5)}
   script:
     # Create egapro secrets
     - envsubst < ./.k8s/secret/secret-dev.yml > .k8s/secret/secret-dev-egapro.yml
@@ -296,6 +298,7 @@ Create egapro/secret (dev):
   - SUFFIX_BRANCH_NAME=$(printf "$CI_COMMIT_REF_NAME" | sha1sum | cut -c1-5)
   - export SUFFIX_BRANCH_NAME=-$SUFFIX_BRANCH_NAME
   - export K8S_NAMESPACE=egapro${SUFFIX_BRANCH_NAME}
+  - export NAMESPACE_ENVIRONMENT=${NAMESPACE_ENVIRONMENT:=$(printf "${CI_COMMIT_REF_NAME}" | sha1sum | cut -c1-5)}
   only:
   - branches
   except:
