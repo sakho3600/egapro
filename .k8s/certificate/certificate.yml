@@ -16,7 +16,7 @@ spec:
   acme:
     config:
       - dns01:
-          ingressClass: azure/application-gateway
+          provider: azure/application-gateway
         domains:
           - ${APP_URL}
           - "*.egapro.${ENVIRONMENT}.social.gouv.fr"
