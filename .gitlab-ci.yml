@@ -11,7 +11,7 @@ variables:
   DOCKER_DRIVER: overlay2
   DOCKER_HOST: tcp://localhost:2375
   IMAGE_INFRA_BASE_NAME: "infra/images-docker"
-  DEV_NAMESPACE_ENVIRONMENT: "certificat-test"
+  DEV_ENVIRONMENT_NAME: "certificat-test"
   MASTER_NAMESPACE_ENVIRONMENT: "master"
   PREPROD_NAMESPACE_ENVIRONMENT: "preprod"
   PROD_NAMESPACE_ENVIRONMENT: "prod"
