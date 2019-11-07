@@ -21,7 +21,7 @@ variables:
   STARTUP: "egapro"
   APP_DOMAIN_NAME: "dev.fabrique.social.gouv.fr"
   # Rancher project id
-  RANCHER_PROJECT_ID: c-wn96j:p-kgd6f
+  RANCHER_PROJECT_ID: c-r8ggm:p-vxdfd
   RANCHER_PROJECT_ID_PROD: c-wn96j:p-kgd6f
   # Docker Image Version
   DOCKER_VERSION: "18.06"
