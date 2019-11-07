@@ -19,7 +19,7 @@ variables:
   LIFETIME: "permanent"
   LETS_ENCRYPT_ISSUER: "letsencrypt-prod"
   STARTUP: "egapro"
-  APP_DOMAIN_NAME: "dev.fabrique.social.gouv.fr"
+  APP_DOMAIN_NAME: "code.fabrique.social.gouv.fr"
   # Rancher project id
   RANCHER_PROJECT_ID: c-r8ggm:p-vxdfd
   RANCHER_PROJECT_ID_PROD: c-wn96j:p-kgd6f
