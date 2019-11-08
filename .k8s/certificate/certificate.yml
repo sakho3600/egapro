@@ -9,14 +9,14 @@ metadata:
     namespace: ${STARTUP}-${NAMESPACE_ENVIRONMENT}
 spec:
   secretName: crt
-  commonName: "*.code.${ENVIRONMENT}.social.gouv.fr"
+  commonName: "code.${ENVIRONMENT}.social.gouv.fr"
   dnsNames:
     - ${APP_URL}
     - "*.egapro.code.${ENVIRONMENT}.social.gouv.fr"
   acme:
     config:
       - dns01:
-          provider: cert-manager
+          provider: azure-dns
         domains:
           - ${APP_URL}
           - "*.egapro.code.${ENVIRONMENT}.social.gouv.fr"
