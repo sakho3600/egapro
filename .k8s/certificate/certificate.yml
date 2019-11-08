@@ -9,16 +9,14 @@ metadata:
     namespace: ${STARTUP}-${NAMESPACE_ENVIRONMENT}
 spec:
   secretName: crt
-  commonName: "code.${ENVIRONMENT}.social.gouv.fr"
+  commonName: "*.egapro.code.${ENVIRONMENT}.social.gouv.fr"
   dnsNames:
-    - ${APP_URL}
     - "*.egapro.code.${ENVIRONMENT}.social.gouv.fr"
   acme:
     config:
       - dns01:
           provider: azure-dns
         domains:
-          - ${APP_URL}
           - "*.egapro.code.${ENVIRONMENT}.social.gouv.fr"
   issuerRef:
     name: letsencrypt-staging
