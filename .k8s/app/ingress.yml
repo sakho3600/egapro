@@ -20,4 +20,6 @@ spec:
             serviceName: app
             servicePort: ${PORT}
   tls:
-    - secretName: crt
+    - hosts:
+        - ${APP_URL}
+      secretName: crt

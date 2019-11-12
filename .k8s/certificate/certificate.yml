@@ -10,6 +10,7 @@ metadata:
 spec:
   secretName: crt
   commonName: "*.egapro.code.${ENVIRONMENT}.social.gouv.fr"
+  #   commonName: "*.code.${ENVIRONMENT}.social.gouv.fr"
   dnsNames:
     - "*.egapro.code.${ENVIRONMENT}.social.gouv.fr"
   acme:
