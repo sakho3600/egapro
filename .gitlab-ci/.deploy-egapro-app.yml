@@ -4,7 +4,7 @@
 .deploy_egapro_app: &deploy_egapro_app
   image: ${CI_REGISTRY}/socialgouv/docker/kubectl:${KUBECTL_VERSION}
   script:
-    - export APP_URL=${NAMESPACE_ENVIRONMENT}.${STARTUP}.${APP_DOMAIN_NAME}
+    - export APP_URL=${STARTUP}-${NAMESPACE_ENVIRONMENT}.${APP_DOMAIN_NAME}
     - export K8S_NAMESPACE=${STARTUP}-${NAMESPACE_ENVIRONMENT}
     - envsubst < .k8s/app/deployment.yml > .k8s/app/deployment-${STARTUP}.yml
     - envsubst < .k8s/app/service.yml > .k8s/app/service-${STARTUP}.yml
