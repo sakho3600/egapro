@@ -22,4 +22,4 @@ spec:
   tls:
     - hosts:
         - ${APP_URL}
-      secretName: crt
+      secretName: wildcard-crt

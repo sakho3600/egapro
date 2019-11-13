@@ -19,7 +19,6 @@ spec:
           provider: azure-dns
         domains:
           - "*.code.${ENVIRONMENT}.social.gouv.fr"
-          - "egapro-3f447.code.${ENVIRONMENT}.social.gouv.fr"
   issuerRef:
     name: letsencrypt-staging
     kind: ClusterIssuer

@@ -9,11 +9,11 @@
     - envsubst < .k8s/app/deployment.yml > .k8s/app/deployment-${STARTUP}.yml
     - envsubst < .k8s/app/service.yml > .k8s/app/service-${STARTUP}.yml
     - envsubst < .k8s/app/ingress.yml > .k8s/app/ingress-${STARTUP}.yml
-    - envsubst < .k8s/certificate/certificate.yml > .k8s/certificate/certificate-${STARTUP}.yml
+#    - envsubst < .k8s/certificate/certificate.yml > .k8s/certificate/certificate-${STARTUP}.yml
     - kubectl apply -f .k8s/app/deployment-${STARTUP}.yml -n ${K8S_NAMESPACE}
     - kubectl apply -f .k8s/app/service-${STARTUP}.yml -n ${K8S_NAMESPACE}
     - kubectl apply -f .k8s/app/ingress-${STARTUP}.yml -n ${K8S_NAMESPACE}
-    - kubectl apply -f .k8s/certificate/certificate-${STARTUP}.yml -n ${K8S_NAMESPACE}
+#    - kubectl apply -f .k8s/certificate/certificate-${STARTUP}.yml -n ${K8S_NAMESPACE}
     - kubectl wait --for=condition=Ready pod -l component=app -n ${K8S_NAMESPACE} --timeout=600s
   allow_failure: false
 #
