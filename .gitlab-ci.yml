@@ -157,6 +157,7 @@ Get Github Id (preprod):
     # Create namespace
     - kubectl create namespace ${K8S_NAMESPACE}
     - kubectl annotate namespace ${K8S_NAMESPACE} field.cattle.io/projectId=${RANCHER_PROJECT_ID}
+    - kubectl label namespace ${K8S_NAMESPACE} app=kubed
 #
 
 Create namespace (dev):
