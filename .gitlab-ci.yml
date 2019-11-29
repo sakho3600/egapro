@@ -11,7 +11,7 @@ variables:
   DOCKER_DRIVER: overlay2
   DOCKER_HOST: tcp://localhost:2375
   IMAGE_INFRA_BASE_NAME: "infra/images-docker"
-  DEV_NAMESPACE_ENVIRONMENT: "egapro-dev"
+  DEV_NAMESPACE_ENVIRONMENT: "alerting-test"
   MASTER_NAMESPACE_ENVIRONMENT: "master"
   PREPROD_NAMESPACE_ENVIRONMENT: "preprod"
   PROD_NAMESPACE_ENVIRONMENT: "prod"
@@ -19,9 +19,9 @@ variables:
   LIFETIME: "permanent"
   LETS_ENCRYPT_ISSUER: "letsencrypt-prod"
   STARTUP: "egapro"
-  APP_DOMAIN_NAME: "dev.fabrique.social.gouv.fr"
+  APP_DOMAIN_NAME: "fabric.social.gouv.fr"
   # Rancher project id
-  RANCHER_PROJECT_ID: c-gsm8d:p-9mvwt
+  RANCHER_PROJECT_ID: c-9s2f6:p-gldwz
   RANCHER_PROJECT_ID_PROD: c-l9h59:p-jcmhs
   # Docker Image Version
   DOCKER_VERSION: "18.06"
