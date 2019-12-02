@@ -19,7 +19,7 @@ variables:
   LIFETIME: "permanent"
   LETS_ENCRYPT_ISSUER: "letsencrypt-prod"
   STARTUP: "egapro"
-  APP_DOMAIN_NAME: "fabric.social.gouv.fr"
+  APP_DOMAIN_NAME: "alerting.fabric.social.gouv.fr"
   # Rancher project id
   RANCHER_PROJECT_ID: c-9s2f6:p-d97lz
   RANCHER_PROJECT_ID_PROD: c-l9h59:p-jcmhs
@@ -157,7 +157,7 @@ Get Github Id (preprod):
     # Create namespace
     - kubectl create namespace ${K8S_NAMESPACE}
     - kubectl annotate namespace ${K8S_NAMESPACE} field.cattle.io/projectId=${RANCHER_PROJECT_ID}
-    - kubectl label namespace ${K8S_NAMESPACE} app=kubed
+    - kubectl label namespace ${K8S_NAMESPACE} cert=wildcard
 #
 
 Create namespace (dev):
