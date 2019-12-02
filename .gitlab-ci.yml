@@ -11,7 +11,7 @@ variables:
   DOCKER_DRIVER: overlay2
   DOCKER_HOST: tcp://localhost:2375
   IMAGE_INFRA_BASE_NAME: "infra/images-docker"
-  DEV_NAMESPACE_ENVIRONMENT: "alerting-test"
+  DEV_ENVIRONMENT_NAME: "alerting-test"
   MASTER_NAMESPACE_ENVIRONMENT: "master"
   PREPROD_NAMESPACE_ENVIRONMENT: "preprod"
   PROD_NAMESPACE_ENVIRONMENT: "prod"
@@ -21,7 +21,7 @@ variables:
   STARTUP: "egapro"
   APP_DOMAIN_NAME: "fabric.social.gouv.fr"
   # Rancher project id
-  RANCHER_PROJECT_ID: c-9s2f6:p-gldwz
+  RANCHER_PROJECT_ID: c-9s2f6:p-d97lz
   RANCHER_PROJECT_ID_PROD: c-l9h59:p-jcmhs
   # Docker Image Version
   DOCKER_VERSION: "18.06"
@@ -164,6 +164,7 @@ Create namespace (dev):
   <<: *create_namespace
   before_script:
     - SUFFIX_BRANCH_NAME=$(printf "$CI_COMMIT_REF_NAME" | sha1sum | cut -c1-5)
+    - echo ${K8S_CONTEXT}
     - export SUFFIX_BRANCH_NAME=-$SUFFIX_BRANCH_NAME
     - export K8S_NAMESPACE=egapro${SUFFIX_BRANCH_NAME}
   only:
