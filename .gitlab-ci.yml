@@ -21,7 +21,7 @@ variables:
   STARTUP: "egapro"
   APP_DOMAIN_NAME: "alerting.fabric.social.gouv.fr"
   # Rancher project id
-  RANCHER_PROJECT_ID: c-9s2f6:p-d97lz
+  RANCHER_PROJECT_ID: c-9s2f6:p-6pxrc
   RANCHER_PROJECT_ID_PROD: c-l9h59:p-jcmhs
   # Docker Image Version
   DOCKER_VERSION: "18.06"
