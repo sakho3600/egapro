@@ -87,6 +87,7 @@ Get Github Id (prod):
 ###       REGISTER DOCKER IMAGES        ###
 ###########################################
 
+
 #
 .register_stage: &register_stage
   stage: "Registration"
