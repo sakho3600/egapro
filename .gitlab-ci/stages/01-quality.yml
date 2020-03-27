@@ -2,6 +2,7 @@
 
 Install:
   extends: .base_yarn
+  image: node:12.16.1-alpine3.11
   interruptible: true
   except:
     variables:
@@ -24,6 +25,7 @@ Install:
 
 Lint:
   extends: .base_yarn_script
+  image: node:12.16.1-alpine3.11
   except:
     variables:
       - $PRODUCTION
@@ -39,6 +41,7 @@ Lint:
 
 Test api:
   extends: .base_yarn_script
+  image: node:12.16.1-alpine3.11
   except:
     variables:
       - $PRODUCTION
@@ -51,6 +54,7 @@ Test api:
 
 Test app:
   extends: .base_yarn_script
+  image: node:12.16.1-alpine3.11
   except:
     variables:
       - $PRODUCTION
@@ -63,6 +67,7 @@ Test app:
 
 Build app:
   extends: .base_yarn_script
+  image: node:12.16.1-alpine3.11
   except:
     variables:
       - $PRODUCTION
@@ -79,6 +84,7 @@ Build app:
 
 Build api:
   extends: .base_yarn_script
+  image: node:12.16.1-alpine3.11
   except:
     variables:
       - $PRODUCTION

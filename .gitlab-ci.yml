@@ -45,7 +45,6 @@ variables:
   GIT_DEPTH: 5
   # Docker Image Version
   DOCKER_VERSION: "18.06"
-  NODE_VERSION: "10"
   CURL_VERSION: "7.67.0"
   HELM_VERSION: "0.20.0"
   KUBECTL_VERSION: "0.7.0"

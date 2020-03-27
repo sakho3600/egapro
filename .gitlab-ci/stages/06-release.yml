@@ -2,7 +2,7 @@
 
 Make a new release and deploy to preprod environment:
   stage: Release
-  image: node:${NODE_VERSION}
+  image: node:12.16.1-alpine3.11
   variables:
     GIT_AUTHOR_EMAIL: 45039513+SocialGroovyBot@users.noreply.github.com
     GIT_AUTHOR_NAME: Social Groovy Bot
